@@ -1,1 +1,0 @@
-jt -t chesterish -fs 95 -altp -tfs 11 -nfs 115 -cursc g

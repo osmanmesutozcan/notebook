@@ -1,0 +1,58 @@
+
+-- Integrate with pyenv --------------------------------------------------------
+
+Set pyenv python path to be the kernel
+this will auto link your python to be
+the kernel.
+
+path:
+    /usr/local/share/jupyter/kernels/python3/kernel.json
+
+Do normal kernel installation and then change path in json file.
+
+my example json:
+    {
+     "argv": [
+      "/Users/osmanmesutozcan/.pyenv/shims/python",
+      "-m",
+      "ipykernel_launcher",
+      "-f",
+      "{connection_file}"
+     ],
+     "language": "python",
+     "display_name": "Python 3"
+    }
+
+-- Keybindings ------------------------------------------------------------------
+
+use https://github.com/lambdalisue/jupyter-vim-binding
+
+fork and change css to NOT to change background on
+mode changes. Very annoying.
+
+-- Colors -----------------------------------------------------------------------
+
+use https://github.com/dunovank/jupyter-themes
+install jupyter-theme and set:
+
+$ pip install jupyter-theme
+$ jt -t chesterish -fs 95 -altp -tfs 11 -nfs 115 -cursc g
+
+also create a startup.ipy file in path:
+    ~/.ipython/profile_default/startup/startup.ipy
+
+in 'startup.ipy' add:
+
+    from jupyterthemes import jtplot
+    jtplot.style(
+            theme='chesterish',
+
+            context='notebook',
+            fscale=1.2,
+            spines=False,
+            gridlines='--',
+
+            ticks=True,
+            grid=False,
+            figsize=(6, 4.5)
+            )
