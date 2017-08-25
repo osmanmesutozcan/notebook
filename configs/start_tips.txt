@@ -35,7 +35,7 @@ mode changes. Very annoying.
 use https://github.com/dunovank/jupyter-themes
 install jupyter-theme and set:
 
-$ pip install jupyter-theme
+$ pip install jupyterthemes
 $ jt -t chesterish -fs 95 -altp -tfs 11 -nfs 115 -cursc g
 
 also create a startup.ipy file in path:
