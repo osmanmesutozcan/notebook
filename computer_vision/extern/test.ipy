@@ -1,0 +1,17 @@
+import numpy as np
+from hough_module import hough_line
+
+
+zero_arr = np.zeros((3,3))
+arr = np.array([
+        [0,0,0],
+        [0,1,0],
+        [0,0,0]
+])
+print("input:")
+print(arr)
+
+print(hough_line(arr, zero_arr))
+
+print("output:")
+print(zero_arr)
